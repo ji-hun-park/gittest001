@@ -4,7 +4,7 @@ const port = 3000; // 사용할 포트 번호
 
 //루트 경로 처리
 app.get('/', (req, res) => {
-  res.send('안녕하세요, Express 서버입니다!');
+  res.sendFile(__dirname + 'index.html');
 });
 
 //추가 경로 처리
@@ -12,9 +12,9 @@ app.get('/home', (req, res) => {
     res.send('안녕하세요, home 입니다!');
 });
 
-app.get('/html', (req, res) => {
+/*app.get('/html', (req, res) => {
     res.sendFile(__dirname + '/index.html');
-});
+});*/
 
 app.get('/login', (req, res) => {
   res.sendFile(__dirname + '/login.html');
